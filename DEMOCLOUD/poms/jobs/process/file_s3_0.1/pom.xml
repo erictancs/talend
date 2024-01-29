@@ -19,11 +19,11 @@
     <talend.job.folder></talend.job.folder>
     <talend.job.context>Default</talend.job.context>
     <talend.job.path>democloud</talend.job.path>
-    <talend.job.git.commit.id></talend.job.git.commit.id>
+    <talend.job.git.commit.id>598e536d04376accad70f8f06487ca3aaaa55780</talend.job.git.commit.id>
     <project.distribution-management.repository.id>${project.distributionManagement.repository.id}</project.distribution-management.repository.id>
     <talend.job.stat>true</talend.job.stat>
-    <talend.job.git.author></talend.job.git.author>
-    <talend.job.jvmargs>-Xms256M -Xmx1024M -Dfile.encoding=UTF-8 </talend.job.jvmargs>
+    <talend.job.git.author>eric.tan@sift-ag.com</talend.job.git.author>
+    <talend.job.jvmargs>-Xms256M -Xmx1024M </talend.job.jvmargs>
     <talend.job.id>_bi3FQIREEe6K79Ugdc6UFA</talend.job.id>
     <talend.job.version>0.1</talend.job.version>
     <talend.job.framework></talend.job.framework>
@@ -40,7 +40,7 @@
     <talend.product.version>8.0.1.20231222_1430-patch</talend.product.version>
     <talend.project.name>DEMOCLOUD</talend.project.name>
     <current.test.resources.dir>${basedir}/src/test/resources</current.test.resources.dir>
-    <talend.job.git.commit.date></talend.job.git.commit.date>
+    <talend.job.git.commit.date>1704942866000</talend.job.git.commit.date>
     <project.distribution-management.repository.url>${project.distributionManagement.repository.url}</project.distribution-management.repository.url>
     <current.bundle.resources.dir>${basedir}/src/main/bundle-resources</current.bundle.resources.dir>
     <talend.job.name>File_S3</talend.job.name>
@@ -651,6 +651,9 @@
     </profile>
     <profile>
       <id>include-running-log4j</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
       <properties>
         <log4j.running.dir>${current.resources.dir}/</log4j.running.dir>
       </properties>
