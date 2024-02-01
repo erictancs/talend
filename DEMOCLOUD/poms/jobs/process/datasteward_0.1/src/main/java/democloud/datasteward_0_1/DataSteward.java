@@ -1002,6 +1002,466 @@ public class DataSteward implements TalendJob {
 
 		}
 
+		public String TDS_ID;
+
+		public String getTDS_ID() {
+			return this.TDS_ID;
+		}
+
+		public Boolean TDS_IDIsNullable() {
+			return false;
+		}
+
+		public Boolean TDS_IDIsKey() {
+			return false;
+		}
+
+		public Integer TDS_IDLength() {
+			return null;
+		}
+
+		public Integer TDS_IDPrecision() {
+			return null;
+		}
+
+		public String TDS_IDDefault() {
+
+			return null;
+
+		}
+
+		public String TDS_IDComment() {
+
+			return "";
+
+		}
+
+		public String TDS_IDPattern() {
+
+			return "";
+
+		}
+
+		public String TDS_IDOriginalDbColumnName() {
+
+			return "TDS_ID";
+
+		}
+
+		public String TDS_STATE;
+
+		public String getTDS_STATE() {
+			return this.TDS_STATE;
+		}
+
+		public Boolean TDS_STATEIsNullable() {
+			return false;
+		}
+
+		public Boolean TDS_STATEIsKey() {
+			return false;
+		}
+
+		public Integer TDS_STATELength() {
+			return null;
+		}
+
+		public Integer TDS_STATEPrecision() {
+			return null;
+		}
+
+		public String TDS_STATEDefault() {
+
+			return null;
+
+		}
+
+		public String TDS_STATEComment() {
+
+			return "";
+
+		}
+
+		public String TDS_STATEPattern() {
+
+			return "";
+
+		}
+
+		public String TDS_STATEOriginalDbColumnName() {
+
+			return "TDS_STATE";
+
+		}
+
+		public String TDS_ASSIGNEE;
+
+		public String getTDS_ASSIGNEE() {
+			return this.TDS_ASSIGNEE;
+		}
+
+		public Boolean TDS_ASSIGNEEIsNullable() {
+			return true;
+		}
+
+		public Boolean TDS_ASSIGNEEIsKey() {
+			return false;
+		}
+
+		public Integer TDS_ASSIGNEELength() {
+			return null;
+		}
+
+		public Integer TDS_ASSIGNEEPrecision() {
+			return null;
+		}
+
+		public String TDS_ASSIGNEEDefault() {
+
+			return null;
+
+		}
+
+		public String TDS_ASSIGNEEComment() {
+
+			return "";
+
+		}
+
+		public String TDS_ASSIGNEEPattern() {
+
+			return "";
+
+		}
+
+		public String TDS_ASSIGNEEOriginalDbColumnName() {
+
+			return "TDS_ASSIGNEE";
+
+		}
+
+		public long TDS_CREATION;
+
+		public long getTDS_CREATION() {
+			return this.TDS_CREATION;
+		}
+
+		public Boolean TDS_CREATIONIsNullable() {
+			return false;
+		}
+
+		public Boolean TDS_CREATIONIsKey() {
+			return false;
+		}
+
+		public Integer TDS_CREATIONLength() {
+			return null;
+		}
+
+		public Integer TDS_CREATIONPrecision() {
+			return null;
+		}
+
+		public String TDS_CREATIONDefault() {
+
+			return null;
+
+		}
+
+		public String TDS_CREATIONComment() {
+
+			return "";
+
+		}
+
+		public String TDS_CREATIONPattern() {
+
+			return "";
+
+		}
+
+		public String TDS_CREATIONOriginalDbColumnName() {
+
+			return "TDS_CREATION";
+
+		}
+
+		public long TDS_LAST_UPDATE;
+
+		public long getTDS_LAST_UPDATE() {
+			return this.TDS_LAST_UPDATE;
+		}
+
+		public Boolean TDS_LAST_UPDATEIsNullable() {
+			return false;
+		}
+
+		public Boolean TDS_LAST_UPDATEIsKey() {
+			return false;
+		}
+
+		public Integer TDS_LAST_UPDATELength() {
+			return null;
+		}
+
+		public Integer TDS_LAST_UPDATEPrecision() {
+			return null;
+		}
+
+		public String TDS_LAST_UPDATEDefault() {
+
+			return null;
+
+		}
+
+		public String TDS_LAST_UPDATEComment() {
+
+			return "";
+
+		}
+
+		public String TDS_LAST_UPDATEPattern() {
+
+			return "";
+
+		}
+
+		public String TDS_LAST_UPDATEOriginalDbColumnName() {
+
+			return "TDS_LAST_UPDATE";
+
+		}
+
+		public String TDS_LAST_UPDATED_BY;
+
+		public String getTDS_LAST_UPDATED_BY() {
+			return this.TDS_LAST_UPDATED_BY;
+		}
+
+		public Boolean TDS_LAST_UPDATED_BYIsNullable() {
+			return true;
+		}
+
+		public Boolean TDS_LAST_UPDATED_BYIsKey() {
+			return false;
+		}
+
+		public Integer TDS_LAST_UPDATED_BYLength() {
+			return null;
+		}
+
+		public Integer TDS_LAST_UPDATED_BYPrecision() {
+			return null;
+		}
+
+		public String TDS_LAST_UPDATED_BYDefault() {
+
+			return null;
+
+		}
+
+		public String TDS_LAST_UPDATED_BYComment() {
+
+			return "";
+
+		}
+
+		public String TDS_LAST_UPDATED_BYPattern() {
+
+			return "";
+
+		}
+
+		public String TDS_LAST_UPDATED_BYOriginalDbColumnName() {
+
+			return "TDS_LAST_UPDATED_BY";
+
+		}
+
+		public Integer TDS_PRIORITY;
+
+		public Integer getTDS_PRIORITY() {
+			return this.TDS_PRIORITY;
+		}
+
+		public Boolean TDS_PRIORITYIsNullable() {
+			return true;
+		}
+
+		public Boolean TDS_PRIORITYIsKey() {
+			return false;
+		}
+
+		public Integer TDS_PRIORITYLength() {
+			return null;
+		}
+
+		public Integer TDS_PRIORITYPrecision() {
+			return null;
+		}
+
+		public String TDS_PRIORITYDefault() {
+
+			return null;
+
+		}
+
+		public String TDS_PRIORITYComment() {
+
+			return "";
+
+		}
+
+		public String TDS_PRIORITYPattern() {
+
+			return "";
+
+		}
+
+		public String TDS_PRIORITYOriginalDbColumnName() {
+
+			return "TDS_PRIORITY";
+
+		}
+
+		public String TDS_TAGS;
+
+		public String getTDS_TAGS() {
+			return this.TDS_TAGS;
+		}
+
+		public Boolean TDS_TAGSIsNullable() {
+			return true;
+		}
+
+		public Boolean TDS_TAGSIsKey() {
+			return false;
+		}
+
+		public Integer TDS_TAGSLength() {
+			return null;
+		}
+
+		public Integer TDS_TAGSPrecision() {
+			return null;
+		}
+
+		public String TDS_TAGSDefault() {
+
+			return null;
+
+		}
+
+		public String TDS_TAGSComment() {
+
+			return "";
+
+		}
+
+		public String TDS_TAGSPattern() {
+
+			return "";
+
+		}
+
+		public String TDS_TAGSOriginalDbColumnName() {
+
+			return "TDS_TAGS";
+
+		}
+
+		public Long TDS_DUE_DATE;
+
+		public Long getTDS_DUE_DATE() {
+			return this.TDS_DUE_DATE;
+		}
+
+		public Boolean TDS_DUE_DATEIsNullable() {
+			return true;
+		}
+
+		public Boolean TDS_DUE_DATEIsKey() {
+			return false;
+		}
+
+		public Integer TDS_DUE_DATELength() {
+			return null;
+		}
+
+		public Integer TDS_DUE_DATEPrecision() {
+			return null;
+		}
+
+		public String TDS_DUE_DATEDefault() {
+
+			return null;
+
+		}
+
+		public String TDS_DUE_DATEComment() {
+
+			return "";
+
+		}
+
+		public String TDS_DUE_DATEPattern() {
+
+			return "";
+
+		}
+
+		public String TDS_DUE_DATEOriginalDbColumnName() {
+
+			return "TDS_DUE_DATE";
+
+		}
+
+		public String TDS_EXTERNAL_ID;
+
+		public String getTDS_EXTERNAL_ID() {
+			return this.TDS_EXTERNAL_ID;
+		}
+
+		public Boolean TDS_EXTERNAL_IDIsNullable() {
+			return true;
+		}
+
+		public Boolean TDS_EXTERNAL_IDIsKey() {
+			return false;
+		}
+
+		public Integer TDS_EXTERNAL_IDLength() {
+			return null;
+		}
+
+		public Integer TDS_EXTERNAL_IDPrecision() {
+			return null;
+		}
+
+		public String TDS_EXTERNAL_IDDefault() {
+
+			return null;
+
+		}
+
+		public String TDS_EXTERNAL_IDComment() {
+
+			return "";
+
+		}
+
+		public String TDS_EXTERNAL_IDPattern() {
+
+			return "";
+
+		}
+
+		public String TDS_EXTERNAL_IDOriginalDbColumnName() {
+
+			return "TDS_EXTERNAL_ID";
+
+		}
+
 		private String readString(ObjectInputStream dis) throws IOException {
 			String strReturn = null;
 			int length = 0;
@@ -1062,6 +1522,48 @@ public class DataSteward implements TalendJob {
 			}
 		}
 
+		private Integer readInteger(ObjectInputStream dis) throws IOException {
+			Integer intReturn;
+			int length = 0;
+			length = dis.readByte();
+			if (length == -1) {
+				intReturn = null;
+			} else {
+				intReturn = dis.readInt();
+			}
+			return intReturn;
+		}
+
+		private Integer readInteger(org.jboss.marshalling.Unmarshaller dis) throws IOException {
+			Integer intReturn;
+			int length = 0;
+			length = dis.readByte();
+			if (length == -1) {
+				intReturn = null;
+			} else {
+				intReturn = dis.readInt();
+			}
+			return intReturn;
+		}
+
+		private void writeInteger(Integer intNum, ObjectOutputStream dos) throws IOException {
+			if (intNum == null) {
+				dos.writeByte(-1);
+			} else {
+				dos.writeByte(0);
+				dos.writeInt(intNum);
+			}
+		}
+
+		private void writeInteger(Integer intNum, org.jboss.marshalling.Marshaller marshaller) throws IOException {
+			if (intNum == null) {
+				marshaller.writeByte(-1);
+			} else {
+				marshaller.writeByte(0);
+				marshaller.writeInt(intNum);
+			}
+		}
+
 		public void readData(ObjectInputStream dis) {
 
 			synchronized (commonByteArrayLock_DEMOCLOUD_DataSteward) {
@@ -1097,6 +1599,31 @@ public class DataSteward implements TalendJob {
 					this.Phone = readString(dis);
 
 					this.Email = readString(dis);
+
+					this.TDS_ID = readString(dis);
+
+					this.TDS_STATE = readString(dis);
+
+					this.TDS_ASSIGNEE = readString(dis);
+
+					this.TDS_CREATION = dis.readLong();
+
+					this.TDS_LAST_UPDATE = dis.readLong();
+
+					this.TDS_LAST_UPDATED_BY = readString(dis);
+
+					this.TDS_PRIORITY = readInteger(dis);
+
+					this.TDS_TAGS = readString(dis);
+
+					length = dis.readByte();
+					if (length == -1) {
+						this.TDS_DUE_DATE = null;
+					} else {
+						this.TDS_DUE_DATE = dis.readLong();
+					}
+
+					this.TDS_EXTERNAL_ID = readString(dis);
 
 				} catch (IOException e) {
 					throw new RuntimeException(e);
@@ -1142,6 +1669,31 @@ public class DataSteward implements TalendJob {
 					this.Phone = readString(dis);
 
 					this.Email = readString(dis);
+
+					this.TDS_ID = readString(dis);
+
+					this.TDS_STATE = readString(dis);
+
+					this.TDS_ASSIGNEE = readString(dis);
+
+					this.TDS_CREATION = dis.readLong();
+
+					this.TDS_LAST_UPDATE = dis.readLong();
+
+					this.TDS_LAST_UPDATED_BY = readString(dis);
+
+					this.TDS_PRIORITY = readInteger(dis);
+
+					this.TDS_TAGS = readString(dis);
+
+					length = dis.readByte();
+					if (length == -1) {
+						this.TDS_DUE_DATE = null;
+					} else {
+						this.TDS_DUE_DATE = dis.readLong();
+					}
+
+					this.TDS_EXTERNAL_ID = readString(dis);
 
 				} catch (IOException e) {
 					throw new RuntimeException(e);
@@ -1211,6 +1763,51 @@ public class DataSteward implements TalendJob {
 
 				writeString(this.Email, dos);
 
+				// String
+
+				writeString(this.TDS_ID, dos);
+
+				// String
+
+				writeString(this.TDS_STATE, dos);
+
+				// String
+
+				writeString(this.TDS_ASSIGNEE, dos);
+
+				// long
+
+				dos.writeLong(this.TDS_CREATION);
+
+				// long
+
+				dos.writeLong(this.TDS_LAST_UPDATE);
+
+				// String
+
+				writeString(this.TDS_LAST_UPDATED_BY, dos);
+
+				// Integer
+
+				writeInteger(this.TDS_PRIORITY, dos);
+
+				// String
+
+				writeString(this.TDS_TAGS, dos);
+
+				// Long
+
+				if (this.TDS_DUE_DATE == null) {
+					dos.writeByte(-1);
+				} else {
+					dos.writeByte(0);
+					dos.writeLong(this.TDS_DUE_DATE);
+				}
+
+				// String
+
+				writeString(this.TDS_EXTERNAL_ID, dos);
+
 			} catch (IOException e) {
 				throw new RuntimeException(e);
 			}
@@ -1276,6 +1873,51 @@ public class DataSteward implements TalendJob {
 
 				writeString(this.Email, dos);
 
+				// String
+
+				writeString(this.TDS_ID, dos);
+
+				// String
+
+				writeString(this.TDS_STATE, dos);
+
+				// String
+
+				writeString(this.TDS_ASSIGNEE, dos);
+
+				// long
+
+				dos.writeLong(this.TDS_CREATION);
+
+				// long
+
+				dos.writeLong(this.TDS_LAST_UPDATE);
+
+				// String
+
+				writeString(this.TDS_LAST_UPDATED_BY, dos);
+
+				// Integer
+
+				writeInteger(this.TDS_PRIORITY, dos);
+
+				// String
+
+				writeString(this.TDS_TAGS, dos);
+
+				// Long
+
+				if (this.TDS_DUE_DATE == null) {
+					dos.writeByte(-1);
+				} else {
+					dos.writeByte(0);
+					dos.writeLong(this.TDS_DUE_DATE);
+				}
+
+				// String
+
+				writeString(this.TDS_EXTERNAL_ID, dos);
+
 			} catch (IOException e) {
 				throw new RuntimeException(e);
 			}
@@ -1301,6 +1943,16 @@ public class DataSteward implements TalendJob {
 			sb.append(",Zip=" + String.valueOf(Zip));
 			sb.append(",Phone=" + Phone);
 			sb.append(",Email=" + Email);
+			sb.append(",TDS_ID=" + TDS_ID);
+			sb.append(",TDS_STATE=" + TDS_STATE);
+			sb.append(",TDS_ASSIGNEE=" + TDS_ASSIGNEE);
+			sb.append(",TDS_CREATION=" + String.valueOf(TDS_CREATION));
+			sb.append(",TDS_LAST_UPDATE=" + String.valueOf(TDS_LAST_UPDATE));
+			sb.append(",TDS_LAST_UPDATED_BY=" + TDS_LAST_UPDATED_BY);
+			sb.append(",TDS_PRIORITY=" + String.valueOf(TDS_PRIORITY));
+			sb.append(",TDS_TAGS=" + TDS_TAGS);
+			sb.append(",TDS_DUE_DATE=" + String.valueOf(TDS_DUE_DATE));
+			sb.append(",TDS_EXTERNAL_ID=" + TDS_EXTERNAL_ID);
 			sb.append("]");
 
 			return sb.toString();
@@ -1409,6 +2061,78 @@ public class DataSteward implements TalendJob {
 				sb.append("<null>");
 			} else {
 				sb.append(Email);
+			}
+
+			sb.append("|");
+
+			if (TDS_ID == null) {
+				sb.append("<null>");
+			} else {
+				sb.append(TDS_ID);
+			}
+
+			sb.append("|");
+
+			if (TDS_STATE == null) {
+				sb.append("<null>");
+			} else {
+				sb.append(TDS_STATE);
+			}
+
+			sb.append("|");
+
+			if (TDS_ASSIGNEE == null) {
+				sb.append("<null>");
+			} else {
+				sb.append(TDS_ASSIGNEE);
+			}
+
+			sb.append("|");
+
+			sb.append(TDS_CREATION);
+
+			sb.append("|");
+
+			sb.append(TDS_LAST_UPDATE);
+
+			sb.append("|");
+
+			if (TDS_LAST_UPDATED_BY == null) {
+				sb.append("<null>");
+			} else {
+				sb.append(TDS_LAST_UPDATED_BY);
+			}
+
+			sb.append("|");
+
+			if (TDS_PRIORITY == null) {
+				sb.append("<null>");
+			} else {
+				sb.append(TDS_PRIORITY);
+			}
+
+			sb.append("|");
+
+			if (TDS_TAGS == null) {
+				sb.append("<null>");
+			} else {
+				sb.append(TDS_TAGS);
+			}
+
+			sb.append("|");
+
+			if (TDS_DUE_DATE == null) {
+				sb.append("<null>");
+			} else {
+				sb.append(TDS_DUE_DATE);
+			}
+
+			sb.append("|");
+
+			if (TDS_EXTERNAL_ID == null) {
+				sb.append("<null>");
+			} else {
+				sb.append(TDS_EXTERNAL_ID);
 			}
 
 			sb.append("|");
@@ -3276,7 +4000,7 @@ public class DataSteward implements TalendJob {
 
 		mdcInfo.forEach(org.slf4j.MDC::put);
 		org.slf4j.MDC.put("_subJobName", "tDataStewardshipTaskInput_1");
-		org.slf4j.MDC.put("_subJobPid", "8SvyPJ_" + subJobPidCounter.getAndIncrement());
+		org.slf4j.MDC.put("_subJobPid", "8Sv9uQ_" + subJobPidCounter.getAndIncrement());
 
 		String iterateId = "";
 
@@ -3352,11 +4076,11 @@ public class DataSteward implements TalendJob {
 
 					java.util.List<String[]> list = new java.util.ArrayList<String[]>();
 
-					int[] colLengths = new int[14];
+					int[] colLengths = new int[24];
 
 					public void addRow(String[] row) {
 
-						for (int i = 0; i < 14; i++) {
+						for (int i = 0; i < 24; i++) {
 							if (row[i] != null) {
 								colLengths[i] = Math.max(colLengths[i], row[i].length());
 							}
@@ -3383,11 +4107,11 @@ public class DataSteward implements TalendJob {
 						// name
 						sb.append("|");
 						int k = 0;
-						for (k = 0; k < (totals + 13 - name.length()) / 2; k++) {
+						for (k = 0; k < (totals + 23 - name.length()) / 2; k++) {
 							sb.append(' ');
 						}
 						sb.append(name);
-						for (int i = 0; i < totals + 13 - name.length() - k; i++) {
+						for (int i = 0; i < totals + 23 - name.length() - k; i++) {
 							sb.append(' ');
 						}
 						sb.append("|\n");
@@ -3455,6 +4179,46 @@ public class DataSteward implements TalendJob {
 
 							sbformat.append("|%14$-");
 							sbformat.append(colLengths[13]);
+							sbformat.append("s");
+
+							sbformat.append("|%15$-");
+							sbformat.append(colLengths[14]);
+							sbformat.append("s");
+
+							sbformat.append("|%16$-");
+							sbformat.append(colLengths[15]);
+							sbformat.append("s");
+
+							sbformat.append("|%17$-");
+							sbformat.append(colLengths[16]);
+							sbformat.append("s");
+
+							sbformat.append("|%18$-");
+							sbformat.append(colLengths[17]);
+							sbformat.append("s");
+
+							sbformat.append("|%19$-");
+							sbformat.append(colLengths[18]);
+							sbformat.append("s");
+
+							sbformat.append("|%20$-");
+							sbformat.append(colLengths[19]);
+							sbformat.append("s");
+
+							sbformat.append("|%21$-");
+							sbformat.append(colLengths[20]);
+							sbformat.append("s");
+
+							sbformat.append("|%22$-");
+							sbformat.append(colLengths[21]);
+							sbformat.append("s");
+
+							sbformat.append("|%23$-");
+							sbformat.append(colLengths[22]);
+							sbformat.append("s");
+
+							sbformat.append("|%24$-");
+							sbformat.append(colLengths[23]);
 							sbformat.append("s");
 
 							sbformat.append("|\n");
@@ -3528,9 +4292,49 @@ public class DataSteward implements TalendJob {
 							sb.append(fillChars[2]);
 						}
 						sb.append(fillChars[3]);
+						for (int i = 0; i < colLengths[13] - fillChars[3].length() + 1; i++) {
+							sb.append(fillChars[2]);
+						}
+						sb.append(fillChars[3]);
+						for (int i = 0; i < colLengths[14] - fillChars[3].length() + 1; i++) {
+							sb.append(fillChars[2]);
+						}
+						sb.append(fillChars[3]);
+						for (int i = 0; i < colLengths[15] - fillChars[3].length() + 1; i++) {
+							sb.append(fillChars[2]);
+						}
+						sb.append(fillChars[3]);
+						for (int i = 0; i < colLengths[16] - fillChars[3].length() + 1; i++) {
+							sb.append(fillChars[2]);
+						}
+						sb.append(fillChars[3]);
+						for (int i = 0; i < colLengths[17] - fillChars[3].length() + 1; i++) {
+							sb.append(fillChars[2]);
+						}
+						sb.append(fillChars[3]);
+						for (int i = 0; i < colLengths[18] - fillChars[3].length() + 1; i++) {
+							sb.append(fillChars[2]);
+						}
+						sb.append(fillChars[3]);
+						for (int i = 0; i < colLengths[19] - fillChars[3].length() + 1; i++) {
+							sb.append(fillChars[2]);
+						}
+						sb.append(fillChars[3]);
+						for (int i = 0; i < colLengths[20] - fillChars[3].length() + 1; i++) {
+							sb.append(fillChars[2]);
+						}
+						sb.append(fillChars[3]);
+						for (int i = 0; i < colLengths[21] - fillChars[3].length() + 1; i++) {
+							sb.append(fillChars[2]);
+						}
+						sb.append(fillChars[3]);
+						for (int i = 0; i < colLengths[22] - fillChars[3].length() + 1; i++) {
+							sb.append(fillChars[2]);
+						}
+						sb.append(fillChars[3]);
 
 						// last column
-						for (int i = 0; i < colLengths[13] - fillChars[1].length() + 1; i++) {
+						for (int i = 0; i < colLengths[23] - fillChars[1].length() + 1; i++) {
 							sb.append(fillChars[2]);
 						}
 						sb.append(fillChars[1]);
@@ -3547,7 +4351,9 @@ public class DataSteward implements TalendJob {
 				Util_tLogRow_1 util_tLogRow_1 = new Util_tLogRow_1();
 				util_tLogRow_1.setTableName("OutputConsole");
 				util_tLogRow_1.addRow(new String[] { "Id", "First_Name", "Last_Name", "Gender", "Age", "Occupation",
-						"MaritalStatus", "Salary", "Address", "City", "State", "Zip", "Phone", "Email", });
+						"MaritalStatus", "Salary", "Address", "City", "State", "Zip", "Phone", "Email", "TDS_ID",
+						"TDS_STATE", "TDS_ASSIGNEE", "TDS_CREATION", "TDS_LAST_UPDATE", "TDS_LAST_UPDATED_BY",
+						"TDS_PRIORITY", "TDS_TAGS", "TDS_DUE_DATE", "TDS_EXTERNAL_ID", });
 				StringBuilder strBuffer_tLogRow_1 = null;
 				int nb_line_tLogRow_1 = 0;
 ///////////////////////    			
@@ -3858,7 +4664,7 @@ public class DataSteward implements TalendJob {
 
 				props_tDataStewardshipTaskInput_1.connection.setValue("password",
 						routines.system.PasswordEncryptUtil.decryptPassword(
-								"enc:routine.encryption.key.v1:30zB2C8AufXEl2PW7YkPuCjUfRsKKDRwnBATfpNLP0T4gB+uHxG6Vg=="));
+								"enc:routine.encryption.key.v1:3fp/nM3wXNMW5CQyh+8Y0oz5epRKLyufzYQW4bWykajI3bb0jRgtPw=="));
 
 				props_tDataStewardshipTaskInput_1.connection.refConnection.setValue("referenceDefinitionName",
 						"datastewardship");
@@ -4220,6 +5026,42 @@ public class DataSteward implements TalendJob {
 						if (row1.Email != null) {
 							sb_tFileOutputDelimited_1.append(row1.Email);
 						}
+						sb_tFileOutputDelimited_1.append(OUT_DELIM_tFileOutputDelimited_1);
+						if (row1.TDS_ID != null) {
+							sb_tFileOutputDelimited_1.append(row1.TDS_ID);
+						}
+						sb_tFileOutputDelimited_1.append(OUT_DELIM_tFileOutputDelimited_1);
+						if (row1.TDS_STATE != null) {
+							sb_tFileOutputDelimited_1.append(row1.TDS_STATE);
+						}
+						sb_tFileOutputDelimited_1.append(OUT_DELIM_tFileOutputDelimited_1);
+						if (row1.TDS_ASSIGNEE != null) {
+							sb_tFileOutputDelimited_1.append(row1.TDS_ASSIGNEE);
+						}
+						sb_tFileOutputDelimited_1.append(OUT_DELIM_tFileOutputDelimited_1);
+						sb_tFileOutputDelimited_1.append(row1.TDS_CREATION);
+						sb_tFileOutputDelimited_1.append(OUT_DELIM_tFileOutputDelimited_1);
+						sb_tFileOutputDelimited_1.append(row1.TDS_LAST_UPDATE);
+						sb_tFileOutputDelimited_1.append(OUT_DELIM_tFileOutputDelimited_1);
+						if (row1.TDS_LAST_UPDATED_BY != null) {
+							sb_tFileOutputDelimited_1.append(row1.TDS_LAST_UPDATED_BY);
+						}
+						sb_tFileOutputDelimited_1.append(OUT_DELIM_tFileOutputDelimited_1);
+						if (row1.TDS_PRIORITY != null) {
+							sb_tFileOutputDelimited_1.append(row1.TDS_PRIORITY);
+						}
+						sb_tFileOutputDelimited_1.append(OUT_DELIM_tFileOutputDelimited_1);
+						if (row1.TDS_TAGS != null) {
+							sb_tFileOutputDelimited_1.append(row1.TDS_TAGS);
+						}
+						sb_tFileOutputDelimited_1.append(OUT_DELIM_tFileOutputDelimited_1);
+						if (row1.TDS_DUE_DATE != null) {
+							sb_tFileOutputDelimited_1.append(row1.TDS_DUE_DATE);
+						}
+						sb_tFileOutputDelimited_1.append(OUT_DELIM_tFileOutputDelimited_1);
+						if (row1.TDS_EXTERNAL_ID != null) {
+							sb_tFileOutputDelimited_1.append(row1.TDS_EXTERNAL_ID);
+						}
 						sb_tFileOutputDelimited_1.append(OUT_DELIM_ROWSEP_tFileOutputDelimited_1);
 
 						nb_line_tFileOutputDelimited_1++;
@@ -4272,7 +5114,7 @@ public class DataSteward implements TalendJob {
 
 ///////////////////////		
 
-						String[] row_tLogRow_1 = new String[14];
+						String[] row_tLogRow_1 = new String[24];
 
 						row_tLogRow_1[0] = String.valueOf(row2.Id);
 
@@ -4335,6 +5177,50 @@ public class DataSteward implements TalendJob {
 
 						if (row2.Email != null) { //
 							row_tLogRow_1[13] = String.valueOf(row2.Email);
+
+						} //
+
+						if (row2.TDS_ID != null) { //
+							row_tLogRow_1[14] = String.valueOf(row2.TDS_ID);
+
+						} //
+
+						if (row2.TDS_STATE != null) { //
+							row_tLogRow_1[15] = String.valueOf(row2.TDS_STATE);
+
+						} //
+
+						if (row2.TDS_ASSIGNEE != null) { //
+							row_tLogRow_1[16] = String.valueOf(row2.TDS_ASSIGNEE);
+
+						} //
+
+						row_tLogRow_1[17] = String.valueOf(row2.TDS_CREATION);
+
+						row_tLogRow_1[18] = String.valueOf(row2.TDS_LAST_UPDATE);
+
+						if (row2.TDS_LAST_UPDATED_BY != null) { //
+							row_tLogRow_1[19] = String.valueOf(row2.TDS_LAST_UPDATED_BY);
+
+						} //
+
+						if (row2.TDS_PRIORITY != null) { //
+							row_tLogRow_1[20] = String.valueOf(row2.TDS_PRIORITY);
+
+						} //
+
+						if (row2.TDS_TAGS != null) { //
+							row_tLogRow_1[21] = String.valueOf(row2.TDS_TAGS);
+
+						} //
+
+						if (row2.TDS_DUE_DATE != null) { //
+							row_tLogRow_1[22] = String.valueOf(row2.TDS_DUE_DATE);
+
+						} //
+
+						if (row2.TDS_EXTERNAL_ID != null) { //
+							row_tLogRow_1[23] = String.valueOf(row2.TDS_EXTERNAL_ID);
 
 						} //
 
@@ -4648,7 +5534,7 @@ public class DataSteward implements TalendJob {
 
 		mdcInfo.forEach(org.slf4j.MDC::put);
 		org.slf4j.MDC.put("_subJobName", "talendJobLog");
-		org.slf4j.MDC.put("_subJobPid", "FMYHpa_" + subJobPidCounter.getAndIncrement());
+		org.slf4j.MDC.put("_subJobPid", "equb1P_" + subJobPidCounter.getAndIncrement());
 
 		String iterateId = "";
 
@@ -5021,7 +5907,7 @@ public class DataSteward implements TalendJob {
 		org.slf4j.MDC.put("_startTimestamp", java.time.ZonedDateTime.now(java.time.ZoneOffset.UTC)
 				.format(java.time.format.DateTimeFormatter.ISO_INSTANT));
 		org.slf4j.MDC.put("_jobRepositoryId", "_UXy2wILFEe6PMYwZwGxOMQ");
-		org.slf4j.MDC.put("_compiledAtTimestamp", "2024-02-01T03:44:46.481956100Z");
+		org.slf4j.MDC.put("_compiledAtTimestamp", "2024-02-01T07:40:49.500746800Z");
 
 		java.lang.management.RuntimeMXBean mx = java.lang.management.ManagementFactory.getRuntimeMXBean();
 		String[] mxNameTable = mx.getName().split("@"); //$NON-NLS-1$
@@ -5411,6 +6297,6 @@ public class DataSteward implements TalendJob {
 	ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- * 168815 characters generated by Talend Cloud Data Fabric on the 1 February
- * 2024 at 11:44:46 AM SGT
+ * 192113 characters generated by Talend Cloud Data Fabric on the 1 February
+ * 2024 at 3:40:49 PM SGT
  ************************************************************************************************/
