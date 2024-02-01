@@ -19,7 +19,7 @@
     <talend.job.folder></talend.job.folder>
     <talend.job.context>Default</talend.job.context>
     <talend.job.path>democloud</talend.job.path>
-    <talend.job.git.commit.id>4a962da3f80e2e36c6700c3519b0f896cc20c2d8</talend.job.git.commit.id>
+    <talend.job.git.commit.id>04ffb47ba08a6014d269d6e6b1406154d1d34360</talend.job.git.commit.id>
     <project.distribution-management.repository.id>${project.distributionManagement.repository.id}</project.distribution-management.repository.id>
     <talend.job.stat>true</talend.job.stat>
     <talend.job.git.author>eric.tan@sift-ag.com</talend.job.git.author>
@@ -40,7 +40,7 @@
     <talend.product.version>8.0.1.20231222_1430-patch</talend.product.version>
     <talend.project.name>DEMOCLOUD</talend.project.name>
     <current.test.resources.dir>${basedir}/src/test/resources</current.test.resources.dir>
-    <talend.job.git.commit.date>1706757772000</talend.job.git.commit.date>
+    <talend.job.git.commit.date>1706772341000</talend.job.git.commit.date>
     <project.distribution-management.repository.url>${project.distributionManagement.repository.url}</project.distribution-management.repository.url>
     <current.bundle.resources.dir>${basedir}/src/main/bundle-resources</current.bundle.resources.dir>
     <talend.job.name>Demo</talend.job.name>
