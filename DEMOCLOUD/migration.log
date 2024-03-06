@@ -14,3 +14,6 @@
  * Task [RevertSAPContextModeAdditionalPropMigrationTask] : Nothing to do
  * Task [AutoUpdateRelationsMigrationTask] : Applied successfully
  ---=== End of migration ===---
+ ---=== Start Migration of project DemoCloud ===---
+ * Task [ResetMavenTemplateMigrationTask] : Applied successfully
+ * Task [DeleteWork_MapDBFolderMigrationTask] : Applied successfully
