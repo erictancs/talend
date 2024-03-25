@@ -21,3 +21,6 @@
  * Task [UpdateTDataQualityRulesWebAppTask] : Nothing to do
  * Task [AutoUpdateRelationsMigrationTask] : Applied successfully
  ---=== End of migration ===---
+ ---=== Start Migration of project DemoCloud ===---
+ * Task [ResetMavenTemplateMigrationTask] : Applied successfully
+ * Task [UpdateBeansDefaultLibrariesMigrationTask 8.0.1-R2024-02] : Nothing to do
