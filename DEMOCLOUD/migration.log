@@ -40,3 +40,7 @@
  * Task [UpgradeTacokitMetadataMigrationTask] : Nothing to do
  * Task [AutoUpdateRelationsMigrationTask] : Applied successfully
  ---=== End of migration ===---
+ ---=== Start Migration of project DemoCloud ===---
+ * Task [ResetMavenTemplateMigrationTask] : Applied successfully
+ * Task [UpdateEnableAutoConversionTypeMigrationTask] : Nothing to do
+ * Task [UpdateSystemRoutineChangesMigrationTask] : Applied successfully
