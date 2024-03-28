@@ -14,7 +14,7 @@
     <slf4j-api.version>1.7.34</slf4j-api.version>
     <encoding>UTF-8</encoding>
     <talend.docker.jdk>eclipse-temurin:11</talend.docker.jdk>
-    <signer.version>8.0.9</signer.version>
+    <signer.version>8.0.10</signer.version>
     <talend.docker.name>${talend.project.name.lowercase}/${talend.job.folder}%a</talend.docker.name>
     <maven.deploy.skip>true</maven.deploy.skip>
   </properties>
@@ -236,7 +236,7 @@
         </plugin>
         <plugin>
           <artifactId>maven-surefire-plugin</artifactId>
-          <version>2.22.2</version>
+          <version>3.2.5</version>
           <dependencies>
             <dependency>
               <groupId>org.sonatype.plexus</groupId>
@@ -339,7 +339,7 @@
       <plugin>
         <groupId>org.talend.ci</groupId>
         <artifactId>builder-maven-plugin</artifactId>
-        <version>8.0.13</version>
+        <version>8.0.14</version>
         <executions>
           <execution>
             <phase>generate-sources</phase>
@@ -366,7 +366,7 @@
           <plugin>
             <groupId>org.talend.ci</groupId>
             <artifactId>cloudpublisher-maven-plugin</artifactId>
-            <version>8.0.6</version>
+            <version>8.0.7</version>
             <executions>
               <execution>
                 <phase>deploy</phase>
