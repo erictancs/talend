@@ -84,7 +84,11 @@
     "version" : "0.1",
     "type" : "job"
   },
-  "relatedItems" : [ ]
+  "relatedItems" : [ {
+    "id" : "built-in",
+    "version" : "Latest",
+    "type" : "context"
+  } ]
 }, {
   "baseItem" : {
     "id" : "_nWMQgCh1EeivdvExWCfYdA",

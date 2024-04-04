@@ -1,5 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:xmi="http://www.omg.org/XMI" defaultContext="Default" jobType="Standard" xmi:version="2.0">
-  <context confirmationNeeded="false" hide="false" name="Default"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:xmi="http://www.omg.org/XMI" defaultContext="Production" jobType="Standard" xmi:version="2.0">
+  <context confirmationNeeded="false" hide="false" name="Development">
+    <contextParameter comment="" internalId="_UmLP4PI1Ee6z1eaLi7haNw" name="InFilePath" prompt="InFilePath?" promptNeeded="false" repositoryContextId="built-in" type="id_Directory" value="T:\"/>
+    <contextParameter comment="" internalId="_UmLP4fI1Ee6z1eaLi7haNw" name="OutFilePath" prompt="OutFilePath?" promptNeeded="false" repositoryContextId="built-in" type="id_Directory" value="T:\Output\"/>
+  </context>
+  <context confirmationNeeded="false" hide="false" name="Production">
+    <contextParameter comment="" internalId="_UmLP4vI1Ee6z1eaLi7haNw" name="InFilePath" prompt="InFilePath?" promptNeeded="false" repositoryContextId="built-in" type="id_Directory" value="C:\TalendShare\"/>
+    <contextParameter comment="" internalId="_UmLP4_I1Ee6z1eaLi7haNw" name="OutFilePath" prompt="OutFilePath?" promptNeeded="false" repositoryContextId="built-in" type="id_Directory" value="C:\TalendShare\Output"/>
+  </context>
   <parameters>
     <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" show="false" value="Info"/>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="0"/>
@@ -101,7 +108,7 @@
   <node componentName="tFileInputExcel" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="256" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputExcel_1"/>
     <elementParameter field="CHECK" name="VERSION_2007" value="true"/>
-    <elementParameter field="FILE" name="FILENAME" value="&quot;T:/rawfcinstreturnsv2902_prep.xlsx&quot;"/>
+    <elementParameter field="FILE" name="FILENAME" value="context.InFilePath + &quot;rawfcinstreturnsv2902_prep.xlsx&quot;"/>
     <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:2057sj0UL/T2wSse4Mu0wxMHFEildRWFOvR+kj22"/>
     <elementParameter field="CHECK" name="ALL_SHEETS" value="false"/>
     <elementParameter field="TABLE" name="SHEETLIST">
@@ -517,11 +524,9 @@
   </node>
   <node componentName="tFileOutputDelimited" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="896" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileOutputDelimited_1"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
-    <elementParameter field="CHECK" name="DUMMY" show="false" value="true"/>
     <elementParameter field="CHECK" name="USESTREAM" value="false"/>
     <elementParameter field="TEXT" name="STREAMNAME" show="false" value="outputStream"/>
-    <elementParameter field="FILE" name="FILENAME" value="&quot;T:/Output/refined_output.csv&quot;"/>
+    <elementParameter field="FILE" name="FILENAME" value="context.OutFilePath + &quot;refined_output.csv&quot;"/>
     <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;"/>
     <elementParameter field="CHECK" name="OS_LINE_SEPARATOR_AS_ROW_SEPARATOR" show="false" value="true"/>
     <elementParameter field="OPENED_LIST" name="CSVROWSEPARATOR" show="false" value="&quot;\n&quot;"/>
@@ -597,23 +602,6 @@
       <column comment="" key="false" length="-1" name="YTD_Value" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Double" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tSystem" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="64" posY="192">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSystem_1"/>
-    <elementParameter field="CHECK" name="ROOTDIR" value="false"/>
-    <elementParameter field="DIRECTORY" name="DIRECTORY" show="false" value="&quot;T:/TalendShare&quot;"/>
-    <elementParameter field="RADIO" name="USE_SINGLE_COMMAND" value="true"/>
-    <elementParameter field="MEMO_JAVA" name="COMMAND" value="&quot;net use T: \\\\52.77.146.97\\TalendShare /user:sift2\\eric Password321@@&quot;"/>
-    <elementParameter field="RADIO" name="USE_ARRAY_COMMAND" value="false"/>
-    <elementParameter field="TABLE" name="ARRAY_COMMAND" show="false"/>
-    <elementParameter field="CLOSED_LIST" name="OUTPUT" value="OUTPUT_TO_CONSOLE"/>
-    <elementParameter field="CLOSED_LIST" name="ERROROUTPUT" value="NORMAL_OUTPUT"/>
-    <elementParameter field="TABLE" name="PARAMS"/>
-    <elementParameter field="TEXT" name="LABEL" value="ConnectSharedDrive"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tSystem_1">
-      <column defaultValue="" key="false" length="255" name="outputline" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-    </metadata>
-  </node>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tFileInputExcel_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputExcel_1" target="tFilterRow_4">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
@@ -630,26 +618,18 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row4"/>
   </connection>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tSystem_1" offsetLabelX="0" offsetLabelY="0" source="tSystem_1" target="tFileInputExcel_1">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk1"/>
-  </connection>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputExcel_1"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-  <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tSystem_1"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
-  </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_b0e1c1c4-eda4-4755-98a8-363ecc824235"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>MV/uu90pVJLYIOUWqSoljVjbvaS5wWH72xADb1r1q+MKRuXbG/LyEM4rTOdaeYTn7FYAxpi/rv29&#13;
-d+P+8GZ9Sw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_63a4a6d5-6935-4eb6-8763-c3d6d5c03cc6"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>hfJuk5csP1oIXw5tkZifQ14Uy9U6MzASx5xOsn7CqiQnXAVD2B0tC0DLCE2UNomy6eNZzLxlhMBv&#13;
-XqkAYqhdNA==</DigestValue></Reference></SignedInfo><SignatureValue>PlTmL1Pep4E1YxniItCPyNwTCCGXxWKxUXQwwm0DhkeHcjkww04UooYNzPWUXQaLpDSyZJVxDE++&#13;
-sWRMcONtb/Fb9I+pmY/CDq0GWWtDDs+CMN1org+JvXbqgMXT91KLhEwU9IgmRh0iFYDLpV5vyhir&#13;
-iaJLmcTW2pdAWR7e6xsueC8AIMv3L1KLsRqF845kdt4hCtMJ0+u+aWEIMAJqFDFsS7rZXfvvZBVD&#13;
-FgEo6v8pXkKvKkQSob8pNF4wkRUEHM8c5QDuMXnJSiY0NmJgrWhItisQk8pjR6AWNbKSVlsfHoI/&#13;
-LwGMVNXPpd+cC/5uh2LBWEkO3nfU39plS3hqtA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_5eb3eeed-6110-4157-bb13-73b2b2390c41"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>1pwpLbvRuQaKhZmevENf8oDRrJ9gQN6d03IBAEDcNzQej9746hAkl0r5NOXD9CGTt4gJ8CeE00ii&#13;
+ixCgWgi3Fg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_d47465e6-291b-4967-9471-42675448d209"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>CWIiEN61GwlO4gA/ps04R6rK5kkLMMwje3J7DcJKHwF8RhCRGYX1liSFaVqQONLt5BzvmBkbZA9L&#13;
+yOlR09I+nA==</DigestValue></Reference></SignedInfo><SignatureValue>lWc9YZ61U+ubbYTgeWbSLQh8r+iQD4OtGxmgbdZQJhqhttfQ+G86K6sVbT6qOmGFuxUuOq9Jm3pS&#13;
+87MjSPdyrZ3d5EPRvhVgMNZI+OmiZdQU3saRJ/0ys6rsaV9lpNINWbwVDTnUYkJVONM5BivgUlDC&#13;
+aAYUFdMyKyPFXLaXcI++ct7XKOODIF76HJM8tgIA6SH8151BAWItuMLx8kftUuuJJ36LxQhx3My3&#13;
+O8KIl1UNYTf9ijQ+JfqKg3tbEIutUwABCDfZG9yqlKvENebkunGRx7273BIEScMggAfOlBsbnoxa&#13;
+I9MPMSFp07218D5wsxKPl81WE3iz4qdZ/pSSAQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -671,4 +651,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_63a4a6d5-6935-4eb6-8763-c3d6d5c03cc6" Target="#_b0e1c1c4-eda4-4755-98a8-363ecc824235"><Timestamp>2024-04-01 08:51:20</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_d47465e6-291b-4967-9471-42675448d209" Target="#_5eb3eeed-6110-4157-bb13-73b2b2390c41"><Timestamp>2024-04-04 03:12:12</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
