@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:xmi="http://www.omg.org/XMI" defaultContext="Production" jobType="Standard" xmi:version="2.0">
   <context confirmationNeeded="false" hide="false" name="Development">
-    <contextParameter comment="" internalId="_UmLP4PI1Ee6z1eaLi7haNw" name="InFilePath" prompt="InFilePath?" promptNeeded="false" repositoryContextId="built-in" type="id_Directory" value="C:\SIFT\Projects\Sunrise Capital\Data\Part 1\"/>
-    <contextParameter comment="" internalId="_UmLP4fI1Ee6z1eaLi7haNw" name="OutFilePath" prompt="OutFilePath?" promptNeeded="false" repositoryContextId="built-in" type="id_Directory" value="C:\SIFT\Projects\Sunrise Capital\Data\Part 1\Output\"/>
+    <contextParameter comment="" internalId="_UmLP4PI1Ee6z1eaLi7haNw" name="InFilePath" prompt="InFilePath?" promptNeeded="false" repositoryContextId="built-in" type="id_Directory" value="T:/"/>
+    <contextParameter comment="" internalId="_UmLP4fI1Ee6z1eaLi7haNw" name="OutFilePath" prompt="OutFilePath?" promptNeeded="false" repositoryContextId="built-in" type="id_Directory" value="T:/Output/"/>
   </context>
   <context confirmationNeeded="false" hide="false" name="Production">
     <contextParameter comment="" internalId="_UmLP4vI1Ee6z1eaLi7haNw" name="InFilePath" prompt="InFilePath?" promptNeeded="false" repositoryContextId="built-in" type="id_Directory" value="C:/TalendShare/"/>
@@ -107,15 +107,14 @@
   </parameters>
   <node componentName="tFileList" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="64" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileList_1"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
-    <elementParameter field="DIRECTORY" name="DIRECTORY" value="&quot;C:/SIFT/Projects/Sunrise Capital/Data/Part 1&quot;"/>
+    <elementParameter field="DIRECTORY" name="DIRECTORY" value="context.InFilePath"/>
     <elementParameter field="CLOSED_LIST" name="LIST_MODE" value="FILES"/>
     <elementParameter field="CHECK" name="INCLUDSUBDIR" value="false"/>
     <elementParameter field="CLOSED_LIST" name="CASE_SENSITIVE" value="YES"/>
     <elementParameter field="CHECK" name="ERROR" value="false"/>
     <elementParameter field="CHECK" name="GLOBEXPRESSIONS" value="true"/>
     <elementParameter field="TABLE" name="FILES">
-      <elementValue elementRef="FILEMASK" value="&quot;rawfcinstreturnsv*_prep.xlsx&quot;"/>
+      <elementValue elementRef="FILEMASK" value="rawfcinstreturnsv*"/>
     </elementParameter>
     <elementParameter field="RADIO" name="ORDER_BY_NOTHING" value="true"/>
     <elementParameter field="RADIO" name="ORDER_BY_FILENAME" value="false"/>
@@ -131,7 +130,7 @@
   <node componentName="tFileInputExcel" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="256" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputExcel_2"/>
     <elementParameter field="CHECK" name="VERSION_2007" value="true"/>
-    <elementParameter field="FILE" name="FILENAME" value="context.InFilePath + &quot;rawfcinstreturnsv2902_prep.xlsx&quot;"/>
+    <elementParameter field="FILE" name="FILENAME" value="((String)globalMap.get(&quot;tFileList_1_CURRENT_FILEPATH&quot;))"/>
     <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:8JU1fnxLnRLlamkgcaGHBnGg6B/qCm77zATLzk9T"/>
     <elementParameter field="CHECK" name="ALL_SHEETS" value="false"/>
     <elementParameter field="TABLE" name="SHEETLIST">
@@ -625,6 +624,11 @@
       <column comment="" key="false" length="-1" name="YTD_Value" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_Double" usefulColumn="true"/>
     </metadata>
   </node>
+  <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tFileList_1" offsetLabelX="0" offsetLabelY="0" source="tFileList_1" target="tFileInputExcel_2">
+    <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
+    <elementParameter field="TEXT" name="NUMBER_PARALLEL" show="false" value="2"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="iterate1"/>
+  </connection>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tFileInputExcel_2" offsetLabelX="0" offsetLabelY="0" source="tFileInputExcel_2" target="tFilterRow_4">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
@@ -646,18 +650,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-  <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputExcel_2"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
-  </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_a6fec223-5efc-4dcb-9b9a-4893695605ba"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>MX+BAffLEAoNyaaKC7DJaeAIxXNfZlc5ETRW74MyIojecTi3N97AjSXA8PnjUi7hBfUutHlUklSf&#13;
-GWCDLRrCOQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_0cf011dd-fa9e-426c-b6cb-832eab6c60d2"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>JYpC1SAJT0fzIoilv2EQjEdT4iBkbjBeFO0UkB1tVMDApGP1exSBSNpL6Jmdybl+PDbF0Hrn//sn&#13;
-odpAVbqkBw==</DigestValue></Reference></SignedInfo><SignatureValue>gAn6c61IF/d6uNFW8Bez1P2gHhViz053AWwMYIRuBdf4OrfsSMWry5oi1wVOSXDRJNQA0r7Z6RIj&#13;
-x6ODEiBU/sbMiOlzkTFJg1zfdtphnHl2y8WGT/Vy6hSrE6zVpFrqk3RjT5vCENeuCdQl8lclN/XH&#13;
-2wFDgzoZatUJmjeUuFKD5KUo6Z49LgGSnEvqwB2iKDt5tjNkBlQ/aZtTrzMNsLqYbI/6JMHG0rsC&#13;
-svrbYawFHZXWvzOO/uPGTQ0XjPEN0kObbgfJXwsM1nbhIzer3VJZsRl2MK6raM9NYnnq4W9volbC&#13;
-5v4oEt7urRpLwmgHWCaoE2rHX6Ps8ufDR9B2sQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_d2b5b897-1428-49ab-a697-06b335b88e69"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>YKW7xTDvvTQMEsSIBgkDFG4XPuX+7GQ55xpUMcfhQctOQMn9wBCA6oZNP7uIhA8GKuzXENoi23JI&#13;
+DxNGXGWsXA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_71e19255-4d9c-4b7a-8c59-85ca66fc8563"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>VR/rEDz+sHQHJcELaEe0iepixqAmDW5d4jwdek8Z1Lk0KkUT96cKrCEnnquZhWlHelR5arZKaXg+&#13;
+EBeykfxNfw==</DigestValue></Reference></SignedInfo><SignatureValue>YkukpS7BbnQGGvhIsdPShSPIzcC54+DymTk6uIg9aF/DPllx2rBfSfN3mjXuYX3e9YcEpgtcGIZ9&#13;
+vJFV9YYJfldQKCIwUMcWfKETN85vygkYvkrYuRztg7ajZodVHBWcmPe872g79UkE4kE7BDisScO+&#13;
+FYWzI6aVltZL3GYpChKHqwl83OHI27fxaw37rvR2EC2RavHs1MvEewoQpOiseoT9v2GvPUnUNkfO&#13;
+CObOPAaNzQoLKkd07vB7mUTIO/Y0FW1mR6VEv8coEuxhHJrRMNqED38EOPDvHiB4r736q5zgBO6I&#13;
+PQaS5piEL7s+3PwMhQqeaunu7PwtyGThXu63dw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -679,4 +678,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_0cf011dd-fa9e-426c-b6cb-832eab6c60d2" Target="#_a6fec223-5efc-4dcb-9b9a-4893695605ba"><Timestamp>2024-04-05 01:46:45</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_71e19255-4d9c-4b7a-8c59-85ca66fc8563" Target="#_d2b5b897-1428-49ab-a697-06b335b88e69"><Timestamp>2024-04-05 01:54:33</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
