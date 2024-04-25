@@ -29,6 +29,7 @@
     <talend.job.framework></talend.job.framework>
     <talend.job.parent.id></talend.job.parent.id>
     <talend.routine.groupid>org.example.democloud.code</talend.routine.groupid>
+    <talend.appint.microservice>false</talend.appint.microservice>
     <current.int-resources.dir>${basedir}/src/main/resources</current.int-resources.dir>
     <current.resources.dir>${basedir}/src/main/ext-resources</current.resources.dir>
     <talend.project.name.lowercase>democloud</talend.project.name.lowercase>
@@ -37,7 +38,7 @@
     <output.resources.dir>${talend.job.name}/src/main/resources</output.resources.dir>
     <maven.build.timestamp.format>yyyy-MM-dd HHmmssSSS</maven.build.timestamp.format>
     <talend.project.branch.name>main</talend.project.branch.name>
-    <talend.product.version>8.0.1.20231222_1430-patch</talend.product.version>
+    <talend.product.version>8.0.1.20240321_0816-patch</talend.product.version>
     <talend.project.name>DEMOCLOUD</talend.project.name>
     <current.test.resources.dir>${basedir}/src/test/resources</current.test.resources.dir>
     <talend.job.git.commit.date>1707118395000</talend.job.git.commit.date>
@@ -281,7 +282,7 @@
     <dependency>
       <groupId>org.talend.components</groupId>
       <artifactId>components-api</artifactId>
-      <version>0.37.27</version>
+      <version>0.37.30</version>
       <exclusions>
         <exclusion>
           <artifactId>*</artifactId>
@@ -292,7 +293,7 @@
     <dependency>
       <groupId>org.talend.components</groupId>
       <artifactId>components-common</artifactId>
-      <version>0.37.27</version>
+      <version>0.37.30</version>
       <exclusions>
         <exclusion>
           <artifactId>*</artifactId>
@@ -303,7 +304,7 @@
     <dependency>
       <groupId>org.talend.components</groupId>
       <artifactId>components-dataprep</artifactId>
-      <version>0.37.27</version>
+      <version>0.37.30</version>
       <exclusions>
         <exclusion>
           <artifactId>*</artifactId>
@@ -807,6 +808,28 @@
       </exclusions>
     </dependency>
     <dependency>
+      <groupId>org.talend</groupId>
+      <artifactId>system-routines</artifactId>
+      <version>8.0.1</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>*</artifactId>
+          <groupId>*</groupId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>org.talend</groupId>
+      <artifactId>system-routines-dq</artifactId>
+      <version>8.0.1</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>*</artifactId>
+          <groupId>*</groupId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
       <groupId>org.talend.libraries</groupId>
       <artifactId>talend-codegen-utils</artifactId>
       <version>0.35.0</version>
@@ -1118,7 +1141,7 @@
         <dependency>
           <groupId>io.micrometer</groupId>
           <artifactId>micrometer-registry-prometheus</artifactId>
-          <version>1.9.14</version>
+          <version>1.9.17</version>
         </dependency>
         <dependency>
           <groupId>io.prometheus.jmx</groupId>
@@ -1128,7 +1151,7 @@
         <dependency>
           <groupId>org.springframework.boot</groupId>
           <artifactId>spring-boot-starter-security</artifactId>
-          <version>2.7.15</version>
+          <version>2.7.18</version>
         </dependency>
       </dependencies>
     </profile>
