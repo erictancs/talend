@@ -13,7 +13,6 @@
     <talend.docker.tag>${project.version}</talend.docker.tag>
     <slf4j-api.version>1.7.34</slf4j-api.version>
     <encoding>UTF-8</encoding>
-    <talend.docker.jdk>eclipse-temurin:11</talend.docker.jdk>
     <signer.version>8.0.10</signer.version>
     <talend.docker.name>${talend.project.name.lowercase}/${talend.job.folder}%a</talend.docker.name>
     <maven.deploy.skip>true</maven.deploy.skip>
@@ -67,7 +66,7 @@
             <dependency>
               <groupId>org.apache.commons</groupId>
               <artifactId>commons-compress</artifactId>
-              <version>1.21</version>
+              <version>1.26.0</version>
             </dependency>
             <dependency>
               <groupId>org.apache.maven</groupId>
@@ -139,7 +138,7 @@
             <dependency>
               <groupId>org.apache.commons</groupId>
               <artifactId>commons-compress</artifactId>
-              <version>1.21</version>
+              <version>1.26.0</version>
             </dependency>
             <dependency>
               <groupId>commons-io</groupId>
@@ -200,12 +199,12 @@
             <dependency>
               <groupId>commons-codec</groupId>
               <artifactId>commons-codec</artifactId>
-              <version>1.15</version>
+              <version>1.16.1</version>
             </dependency>
             <dependency>
               <groupId>org.apache.commons</groupId>
               <artifactId>commons-compress</artifactId>
-              <version>1.21</version>
+              <version>1.26.0</version>
             </dependency>
             <dependency>
               <groupId>commons-io</groupId>
@@ -298,7 +297,7 @@
             <dependency>
               <groupId>commons-codec</groupId>
               <artifactId>commons-codec</artifactId>
-              <version>1.15</version>
+              <version>1.16.1</version>
             </dependency>
             <dependency>
               <groupId>org.apache.maven.shared</groupId>
@@ -339,7 +338,7 @@
       <plugin>
         <groupId>org.talend.ci</groupId>
         <artifactId>builder-maven-plugin</artifactId>
-        <version>8.0.14</version>
+        <version>8.0.15</version>
         <executions>
           <execution>
             <phase>generate-sources</phase>
@@ -444,17 +443,17 @@
                 <dependency>
                   <groupId>com.fasterxml.jackson.core</groupId>
                   <artifactId>jackson-annotations</artifactId>
-                  <version>2.14.3</version>
+                  <version>2.16.0</version>
                 </dependency>
                 <dependency>
                   <groupId>com.fasterxml.jackson.core</groupId>
                   <artifactId>jackson-core</artifactId>
-                  <version>2.14.3</version>
+                  <version>2.16.0</version>
                 </dependency>
                 <dependency>
                   <groupId>com.fasterxml.jackson.core</groupId>
                   <artifactId>jackson-databind</artifactId>
-                  <version>2.14.3</version>
+                  <version>2.16.0</version>
                 </dependency>
                 <dependency>
                   <groupId>org.apache.httpcomponents</groupId>
@@ -464,22 +463,22 @@
                 <dependency>
                   <groupId>com.fasterxml.jackson.dataformat</groupId>
                   <artifactId>jackson-dataformat-yaml</artifactId>
-                  <version>2.14.3</version>
+                  <version>2.16.0</version>
                 </dependency>
                 <dependency>
                   <groupId>com.fasterxml.jackson.module</groupId>
                   <artifactId>jackson-module-jaxb-annotations</artifactId>
-                  <version>2.14.3</version>
+                  <version>2.16.0</version>
                 </dependency>
                 <dependency>
                   <groupId>com.fasterxml.jackson.dataformat</groupId>
                   <artifactId>jackson-dataformat-cbor</artifactId>
-                  <version>2.14.3</version>
+                  <version>2.16.0</version>
                 </dependency>
                 <dependency>
                   <groupId>com.fasterxml.jackson.datatype</groupId>
                   <artifactId>jackson-datatype-jsr310</artifactId>
-                  <version>2.14.3</version>
+                  <version>2.16.0</version>
                 </dependency>
                 <dependency>
                   <groupId>org.apache.maven.shared</groupId>
@@ -540,7 +539,16 @@
                       <artifactId>jkube-kit-common</artifactId>
                       <groupId>org.eclipse.jkube</groupId>
                     </exclusion>
+                    <exclusion>
+                      <artifactId>org.eclipse.jgit</artifactId>
+                      <groupId>org.eclipse.jgit</groupId>
+                    </exclusion>
                   </exclusions>
+                </dependency>
+                <dependency>
+                  <groupId>org.eclipse.jgit</groupId>
+                  <artifactId>org.eclipse.jgit</artifactId>
+                  <version>6.8.0.202311291450-r</version>
                 </dependency>
                 <dependency>
                   <groupId>org.eclipse.jkube</groupId>
@@ -598,6 +606,17 @@
                   <groupId>com.squareup.okhttp3</groupId>
                   <artifactId>okhttp</artifactId>
                   <version>5.0.0-alpha.11</version>
+                  <exclusions>
+                    <exclusion>
+                      <artifactId>okio-jvm</artifactId>
+                      <groupId>com.squareup.okio</groupId>
+                    </exclusion>
+                  </exclusions>
+                </dependency>
+                <dependency>
+                  <groupId>com.squareup.okio</groupId>
+                  <artifactId>okio-jvm</artifactId>
+                  <version>3.4.0</version>
                 </dependency>
                 <dependency>
                   <groupId>org.codehaus.plexus</groupId>
@@ -607,7 +626,7 @@
                 <dependency>
                   <groupId>org.apache.commons</groupId>
                   <artifactId>commons-compress</artifactId>
-                  <version>1.21</version>
+                  <version>1.26.0</version>
                 </dependency>
                 <dependency>
                   <groupId>org.apache.maven.resolver</groupId>
@@ -745,6 +764,32 @@
         </pluginManagement>
         <plugins>
           <plugin>
+            <artifactId>maven-resources-plugin</artifactId>
+            <executions>
+              <execution>
+                <id>copy-dockerfile</id>
+                <phase>install</phase>
+                <goals>
+                  <goal>copy-resources</goal>
+                </goals>
+                <configuration>
+                  <skip>${docker.skip}</skip>
+                  <outputDirectory>${project.build.directory}/docker-temp</outputDirectory>
+                  <overwrite>true</overwrite>
+                  <resources>
+                    <resource>
+                      <directory>${basedir}/temp</directory>
+                      <includes>
+                        <include>Dockerfile</include>
+                      </includes>
+                      <filtering>true</filtering>
+                    </resource>
+                  </resources>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
+          <plugin>
             <artifactId>maven-antrun-plugin</artifactId>
             <executions>
               <execution>
@@ -755,7 +800,7 @@
                 <configuration>
                   <skip>${docker.skip}</skip>
                   <target>
-                    <unzip src="${project.basedir}/target/${talend.job.finalName}.zip" dest="${project.basedir}/target/deploy/${talend.job.finalName}" />
+                    <unzip src="${project.build.directory}/${talend.job.finalName}.zip" dest="${project.build.directory}/deploy/${talend.job.finalName}" />
                   </target>
                 </configuration>
               </execution>
@@ -794,32 +839,21 @@
                 <image>
                   <name>${talend.docker.name}</name>
                   <build>
-                    <from>${talend.docker.jdk}</from>
+                    <contextDir>${project.build.directory}/docker-context</contextDir>
+                    <dockerFile>${project.build.directory}/docker-temp/Dockerfile</dockerFile>
                     <tags>
                       <tag>${talend.docker.tag}</tag>
                     </tags>
-                    <env>
-                      <JAVA_OPTS>${talend.job.jvmargs}</JAVA_OPTS>
-                    </env>
-                    <runCmds>
-                      <run>chmod +x /maven/${talend.job.finalName}/${talend.job.name}/${talend.job.name}_run.sh</run>
-                      <run>sed -i 's/ -Xms[0-9]*M//g' /maven/${talend.job.finalName}/${talend.job.name}/${talend.job.name}_run.sh</run>
-                      <run>sed -i 's/-Xmx[0-9]*M/$JAVA_OPTS/g' /maven/${talend.job.finalName}/${talend.job.name}/${talend.job.name}_run.sh</run>
-                    </runCmds>
-                    <workdir>/maven/${talend.job.finalName}/${talend.job.name}</workdir>
-                    <entryPoint>
-                      <exec>
-                        <arg>./${talend.job.name}_run.sh</arg>
-                      </exec>
-                    </entryPoint>
                     <assembly>
-                      <inline>
-                        <fileSets>
-                          <fileSet>
-                            <directory>${project.build.directory}/deploy/${talend.job.finalName}</directory>
-                          </fileSet>
-                        </fileSets>
-                      </inline>
+                      <layers>
+                        <layer>
+                          <fileSets>
+                            <fileSet>
+                              <directory>${project.build.directory}/deploy/${talend.job.finalName}</directory>
+                            </fileSet>
+                          </fileSets>
+                        </layer>
+                      </layers>
                       <excludeFinalOutputArtifact>true</excludeFinalOutputArtifact>
                     </assembly>
                   </build>
