@@ -480,6 +480,11 @@
     "version" : "5.1.2",
     "status" : "noimpact"
   }, {
+    "id" : "org.talend.designer.mapreduce.repository.migration.AddDistributionForSparkMigrationTask",
+    "breaks" : "8.0.0",
+    "version" : "8.0.1",
+    "status" : "noimpact"
+  }, {
     "id" : "org.talend.designer.mapreduce.repository.migration.AddEMRFSMetadataTableNameToS3ConfigurationMigrationTask",
     "breaks" : "7.2.1",
     "version" : "7.3.0",
@@ -1850,6 +1855,11 @@
     "status" : "noimpact"
   }, {
     "id" : "org.talend.repository.model.migration.FileInputRegexContextVariableMigrationTaskForSave",
+    "breaks" : "5.1.1",
+    "version" : "5.1.2",
+    "status" : "noimpact"
+  }, {
+    "id" : "org.talend.repository.model.migration.FixProjectResourceLink",
     "breaks" : "5.1.1",
     "version" : "5.1.2",
     "status" : "noimpact"
